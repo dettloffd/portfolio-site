@@ -20,8 +20,9 @@ const Skills = () => {
 
   return (
     <>
+    <h1 className="skills_watermark">Skills</h1>
       <div className="skills-container">
-        <h1 className="skills_watermark">Skills</h1>
+        
         <motion.div className="skills-list">
           {SkillsArray.map((skill) => (
             <motion.div

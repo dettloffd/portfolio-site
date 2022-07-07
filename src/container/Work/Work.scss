@@ -1,3 +1,5 @@
+@use "../../mixins/respond.scss";
+
 .work {
   flex: 1;
   width: 100%;
@@ -14,6 +16,18 @@
 
   align-items: center;
   justify-content: center;
+
+  @include respond.respond(tab-port){
+    max-width: 85%;
+    // flex-direction: column;
+    padding: 3rem;
+    width: 100%;
+    // align-items: flex-start;
+  }
+
+  @include respond.respond(phone){
+    max-width: 100%;
+  }
 }
 
 // header of the section
@@ -24,12 +38,17 @@
 
 // individual project
 .project {
-  margin-top: 12rem;
+  margin-top: 10rem;
   flex: 1;
   display: flex;
   flex-direction: row;
 
   align-items: center;
+
+  @include respond.respond(tab-port){
+    flex-direction: column;
+
+  }
 
   // Container for all information - title, desc, etc
   &-info {
@@ -37,8 +56,21 @@
     // text-align: right;
 
     flex: 1;
-    display: flex;
-    flex-direction: column;
+
+
+    // container whose purpose is to keep the text from going too close to the images
+    &-container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+
+        @include respond.respond(tab-port){
+            width: 100%;
+          }
+
+        
+
+    }
   }
 
   // Project title
@@ -50,7 +82,7 @@
 
   // Project description
   &-desc {
-    width: 90%;
+    
 
     margin-top: 3.2rem;
     line-height: 1.6;
@@ -88,7 +120,6 @@
 }
 
 .tech-list {
-  width: 90%;
   margin-top: 2.4rem;
   flex: 1;
   display: flex;

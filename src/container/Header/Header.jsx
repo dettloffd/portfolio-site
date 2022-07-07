@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { AppWrapper } from "../../wrapper";
 import { images } from "../../constants";
-import { FaGithub, FaLinkedin, FaMailBulk } from "react-icons/fa";
+import {socialLinks} from "../../constants/socials";
 import "./Header.scss";
 
 const headerVariants = {
@@ -18,22 +18,6 @@ const childVariants = {
   initial: { translateY: 10, opacity: 0 },
   animate: { translateY: 0, opacity: 1, transition: { duration: 0.4 } },
 };
-
-const headerLinks = [
-  {
-    name: "Github",
-    address: "https://github.com/dettloffd",
-    icon: <FaGithub />,
-    target: "_blank",
-  },
-  {
-    name: "LinkedIn",
-    address: "https://www.linkedin.com/in/david-dettloff/",
-    icon: <FaLinkedin />,
-    target: "_blank",
-  },
-  { name: "Email", address: "#contact", icon: <FaMailBulk></FaMailBulk> },
-];
 
 const Header = () => {
   return (
@@ -78,7 +62,7 @@ const Header = () => {
               className="header-links"
               style={{ marginTop: "4.4rem" }}
             >
-              {headerLinks.map((item, index) => (
+              {socialLinks.map((item, index) => (
                 <li className="header-links-item" key={index}>
                   <a href={item.address} target={item.target}>
                     <i className="header-links-icon"> {item.icon} </i>

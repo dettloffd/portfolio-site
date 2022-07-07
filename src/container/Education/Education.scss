@@ -1,38 +1,11 @@
+@use "../../mixins/respond.scss";
+
 .education {
   position: relative;
 
   flex: 1;
   width: 100%;
-  // min-height: 50vh;
-  // margin-top: 10rem;
 
-  // img{
-  //   position: absolute;
-  //   opacity: .06;
-  //   // top: 0;
-  //   left: 1;
-  //   // top: 1;
-  //   bottom: 30%;
-  //   // left: 0;
-  //   // right: 1;
-
-  // }
-
-  // background-image: url('../../assets/wsu_shield.png');
-  // background-repeat: no-repeat;
-  // background-position: 0 0;
-
-  // img{
-  //   position: absolute;
-  //   opacity: .1;
-  //   // left: 2;
-  //   width: 45%;
-  //   max-width: 550px;
-  //   left: 40rem;
-  //   // right: 1;
-  //   // bottom: 0;
-
-  // }
 
   &-header {
     position: relative; // for header pill
@@ -63,7 +36,17 @@
     align-items: center;
     justify-content: center;
 
-    // position: relative;
+    @include respond.respond(tab-port){
+      max-width: 85%;
+      flex-direction: column;
+      padding: 3rem;
+      width: 100%;
+      align-items: flex-start;
+    }
+
+    @include respond.respond(phone){
+      max-width: 100%;
+    }
   }
 
   &-info {
@@ -78,23 +61,35 @@
     text-align: right;
     align-items: flex-end;
     justify-content: center;
+
+    @include respond.respond(tab-port){
+      flex-direction: column;
+      text-align: left;
+      align-items: flex-start;
+      margin-right: 0;
+      
+    }
   }
 }
 
+// WSU watermark
 .education-img {
   position: absolute;
   bottom: 15%;
-
   width: 70%;
   max-width: 550px;
 
-  // // height: 60%;
-  // left: 15%;
-  // right: 0;
-  // bottom: 0;
-  // top: 5%;
-  // z-index: 0;
-  // position: absolute;
+  @include respond.respond(tab-port){
+    bottom: 10%;
+    width: 80%;
+
+  }
+
+  @include respond.respond(phone){
+    bottom: 35%;
+    width: 90%;
+
+  }
 
   //unclickable, undraggable, etc.
   pointer-events: none;
@@ -104,6 +99,19 @@
   flex: 1;
   margin-left: 1rem;
   opacity: 0.7;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include respond.respond(tab-port){
+    margin-top: 3rem;
+    margin-left: 0;
+    // flex: 1 0 10%;
+    flex-direction: row;
+    
+  }
 
   p {
     font-size: 1.6rem;
@@ -116,6 +124,13 @@
   display: flex;
   align-items: center;
 
+  // Creates two columns 
+  @include respond.respond(tab-port){
+    width: 50%;
+  }
+
+
+    
   // animate chevron on hover
   &:hover .courses-item-icon {
     padding-right: 0.1rem;

@@ -5,25 +5,7 @@
     scroll-behavior: smooth;
 }
 
-html{
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-    /* We want 10px as root font size.. it's 16px by default
-    Change to 62.5% to get 10px  */
 
-
-    /* @include respond(tab-land){ // Asks: width < 1200?
-        font-size: 56.25%;  //1rem = 9px, 9/16 = 56.25%
-    }
-
-    @include respond(tab-port){ // asks: width < 900?
-        font-size: 50%; // //1rem = 8px, 8/16 = 50%
-    }
-
-    @include respond(big-desktop){
-        font-size: 75%; //1rem = 12px, 12/16 = 75%
-    } */
-}
 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');

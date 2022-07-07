@@ -1,43 +1,43 @@
+@use "../../mixins/respond.scss";
+
+
 .header-container{
     display: flex;
     flex: 1;
     align-items: center;
     justify-content: center;
-    width: 100%;
 
     width: 80%;
     max-width: 100rem;
+
+
+    @include respond.respond(tab-port){
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
-.header-header{
-
-    position: relative;
-    // overflow: hidden;
-
-    // Little header pill
-    // &:before{
-    //     content: "";
-    //     position: absolute;
-    //     height: 10px;
-    //     width: 8rem;
-    //     background: var(--color-primary);
-    //     border-radius: 10px;
-    //     display: inline-block;
-    //     top: -2rem;
-    // }
-}
-
-// .header-slideup{
-//     position: relative;
-
-// }
 
 .header-info{
+    display: flex;
     flex: 1.5;
     overflow: hidden;
     // width: 80%;
 
+    @include respond.respond(tab-port){
+        flex: 1;
+    }
+
     &-container{
+
+        display: flex;
+        // flex: 1;
+        flex-direction: column;
         width: 95%;
+
+        @include respond.respond(tab-port){
+            width: 100%;
+            justify-content: center;
+        }
     }
 }
 
@@ -46,9 +46,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include respond.respond(tab-port){
+        flex: 0;
+        display: none;
+    }
 
     img{
         width: 80%;
+
+        @include respond.respond(tab-port){
+            width: 90%;
+        }
     }
 
     
