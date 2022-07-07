@@ -1,13 +1,62 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    /* We want 10px as root font size.. it's 16px by default
+    Change to 62.5% to get 10px  */
+
+
+    /* @include respond(tab-land){ // Asks: width < 1200?
+        font-size: 56.25%;  //1rem = 9px, 9/16 = 56.25%
+    }
+
+    @include respond(tab-port){ // asks: width < 900?
+        font-size: 50%; // //1rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(big-desktop){
+        font-size: 75%; //1rem = 12px, 12/16 = 75%
+    } */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+    --font-base: "Inter", sans-serif;
+    --color-primary: #3AAFA9;
+    --color-primary-dark: #007f7a;
+
+    --color-grey-text: #6b7280;
+    --color-grey-text-darker: #5e6570;
+
+
+    --bg-teal: #f7ffff;
+    --bg-teal2: #EEF5F9;
+    --bg-blueish: #eef5f9;
+    --bg-blueish2: #eef5f9;
+
+    --bg-greyish: #f5fbfa;
+    --bg-color: #edf2f8;
+
+    --bg-offwhite:#fafafa;
+
+    --font-color-dark1: #4c5857;
+    --font-color-dark2: #3e4645;
+    --font-color-lighter: #6d7877;
+
+    
+
+}
+
+::selection{
+    background-color: var(--color-primary);
+    color: var(--bg-offwhite);
 }

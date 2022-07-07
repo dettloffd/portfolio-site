@@ -1,0 +1,139 @@
+.education {
+  position: relative;
+
+  flex: 1;
+  width: 100%;
+  // min-height: 50vh;
+  // margin-top: 10rem;
+
+  // img{
+  //   position: absolute;
+  //   opacity: .06;
+  //   // top: 0;
+  //   left: 1;
+  //   // top: 1;
+  //   bottom: 30%;
+  //   // left: 0;
+  //   // right: 1;
+
+  // }
+
+  // background-image: url('../../assets/wsu_shield.png');
+  // background-repeat: no-repeat;
+  // background-position: 0 0;
+
+  // img{
+  //   position: absolute;
+  //   opacity: .1;
+  //   // left: 2;
+  //   width: 45%;
+  //   max-width: 550px;
+  //   left: 40rem;
+  //   // right: 1;
+  //   // bottom: 0;
+
+  // }
+
+  &-header {
+    position: relative; // for header pill
+    display: inline-block;
+    width: fit-content;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 8px;
+      width: 6rem;
+      background: var(--color-primary);
+      border-radius: 10px;
+      display: inline-block;
+      top: -1.6rem;
+      // right: 0;
+    }
+  }
+
+  &-container {
+    position: relative;
+    max-width: 120rem;
+    width: 80%;
+
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    // position: relative;
+  }
+
+  &-info {
+    flex: 1;
+
+    color: var(--color-grey-text);
+
+    margin-right: 1rem;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
+
+.education-img {
+  position: absolute;
+  bottom: 15%;
+
+  width: 70%;
+  max-width: 550px;
+
+  // // height: 60%;
+  // left: 15%;
+  // right: 0;
+  // bottom: 0;
+  // top: 5%;
+  // z-index: 0;
+  // position: absolute;
+
+  //unclickable, undraggable, etc.
+  pointer-events: none;
+}
+
+.education-courses {
+  flex: 1;
+  margin-left: 1rem;
+  opacity: 0.7;
+
+  p {
+    font-size: 1.6rem;
+    margin: 0.8rem 0;
+  }
+}
+
+// Individual course container
+.courses-item {
+  display: flex;
+  align-items: center;
+
+  // animate chevron on hover
+  &:hover .courses-item-icon {
+    padding-right: 0.1rem;
+    font-weight: 700;
+    transform: scale(1.25);
+  }
+
+  // Chevron icon
+  &-icon {
+    transition: all 0.2s;
+    color: var(--color-primary);
+    padding-right: 0.5rem;
+    font-size: 2.4rem;
+  }
+}
+
+.university-name {
+  font-weight: 500;
+  // opacity: .7;
+  color: var(--font-color-dark1);
+}

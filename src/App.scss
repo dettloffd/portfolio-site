@@ -1,0 +1,95 @@
+.app{
+  font-family: var(--font-base);
+  // background-color: #f6ffff;
+  // background-color: white;
+  // background-color: var(--bg-teal);
+  background-color: #fafafa;
+  // background-color: #f2f3f4;
+
+}
+
+.header-text{
+  font-size: 5.8rem;
+  font-weight: 600;
+  color: var(--font-color-dark1);
+}
+
+.header-text-2{
+  font-size: 3.6rem;
+  font-weight: 400;
+  color: var(--color-grey-text);
+}
+
+.header-text-3{
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-grey-text);
+}
+
+.p-text{
+  font-size: 1.9rem;
+  font-weight: 300;
+  opacity: .7;
+
+}
+
+.color-primary{
+  color: var(--color-primary);
+}
+
+.color-primary-dark{
+  color: var(--color-primary-dark);
+}
+
+.app__container {
+    width: 100%;
+    min-height: 100vh;
+  
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .app__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .app__wrapper {
+    flex: 1;
+    width: 100%;
+    flex-direction: column; 
+    padding: 4rem 2rem;
+  
+    @media screen and (max-width: 450px) {
+      padding: 4rem 1rem 2rem;
+    }
+  }
+
+  .app__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+    padding: 1rem;
+  
+    .app__navigation-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #cbcbcb;
+      margin: 0.5rem;
+  
+      transition: var(--color-primary) 0.2s ease-in-out;
+  
+      &:hover {
+        background-color: var(--color-primary);
+      }
+  
+      @media screen and (min-width: 2000px) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }

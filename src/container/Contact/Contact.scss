@@ -1,0 +1,132 @@
+.contact {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  &-header {
+    position: relative;
+
+    // Little header pill
+    &:before {
+      content: "";
+      position: absolute;
+      height: 8px;
+      width: 6rem;
+      background: var(--color-primary);
+      border-radius: 10px;
+      display: inline-block;
+      top: -1.2rem;
+    }
+  }
+
+  &__secondary-header {
+    opacity: 0.9;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+.contact_watermark{
+    position: absolute;
+    color: var(--color-primary-dark);
+    font-size: 72rem;
+    opacity: .017;
+    pointer-events: none;
+    // left: 1;
+    // top: 5%;
+    // top: 1;
+    // left: 1;
+    bottom: 30%;
+  }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 1rem 2rem;
+
+  &__group {
+    width: 100%;
+  }
+
+  &__group:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+
+  textarea {
+    height: 150px;
+  }
+
+  &__input {
+    // for some reason inputs don't automatically inherit font settings
+    // must set manually like so..
+    font-family: inherit;
+    font-size: 1.6rem;
+    padding: 1.6rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #3aafa90c;
+    
+
+    // take up the whole area.. block structuring
+    width: 100%;
+    display: block;
+
+    color: var(--font-color-dark1);
+
+    &:focus {
+      outline: none; // ugly blue border on focus
+
+      // These are important for accessibility reasons -
+      // want to ensure you know what input element is focused in case using keyboard only to navigate
+      // plus it just looks good
+      border: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: var(--color-grey-text);
+      opacity: 0.7;
+    }
+  }
+  &__btn {
+    font-size: 1.6rem;
+    padding: 1.6rem 3.2rem;
+    border-radius: 0.75rem;
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-primary);
+    color: #f2f3f4;
+    font-weight: 300;
+
+    display: inline-block;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem;
+
+    &:hover {
+      background-color: var(--secondary-color);
+      color: var(--color-primary);
+    //   transform: scale(1.02);
+    }
+    // margin: 2rem 0.25rem;
+    // color: white;
+    // background-color: var(--color-primary);
+    // padding: 1rem 5rem;
+    // display: inline-block; // necessary for effect!
+    // font-size: 2rem;
+    // transition: all 0.2s;
+    // backface-visibility: hidden;
+    // border: none;
+    // cursor: pointer;
+
+    // &:hover {
+    //   backface-visibility: hidden;
+    //   color: white;
+    //   transform: scale(1.05);
+    //   background-color: var(--color-primary-dark);
+    // }
+  }
+}

@@ -1,0 +1,202 @@
+.header-container{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    width: 80%;
+    max-width: 120rem;
+}
+.header-header{
+
+    position: relative;
+
+    // Little header pill
+    &:before{
+        content: "";
+        position: absolute;
+        height: 10px;
+        width: 8rem;
+        background: var(--color-primary);
+        border-radius: 10px;
+        display: inline-block;
+        top: -2rem;
+    }
+}
+
+.header-info{
+    flex: 1.5;
+    // width: 80%;
+
+    &-container{
+        width: 95%;
+    }
+}
+
+.header-img{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width: 80%;
+    }
+
+    
+}
+
+
+.header-links{
+
+    // margin-top: 2rem;
+    list-style: none;
+
+    &-item{
+        position: relative; // so icon title effect works
+        display: inline-block;
+        padding: 0 3.2rem 0 0;
+
+        &:hover .header-links-icon{
+           
+            color: var(--color-primary-dark);
+            transform: scale(1.5);
+            
+        }
+    }
+
+    &-icon{
+        font-size: 3rem;
+        color: var(--font-color-dark1);
+        transition: all .25s;  
+    }
+
+
+
+}
+
+.about-me{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 80vh;
+    margin-bottom: 4rem;
+
+    // @include respond(tab-port){
+    //     flex-direction: column;
+    //     justify-content: space-around;
+    //     margin-top: 2rem;
+    //     height: 100%;
+
+    // }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        // @include respond(tab-port){
+        //     width: 70%;
+        //     margin-bottom: 5rem;
+    
+        // }
+
+        &--title{
+            display: inline-block;
+            margin-bottom: 2rem;
+            position: relative; // for underline effect **
+        }
+
+        &--subtitle{
+            display: block;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            position: relative; // for underline effect** 
+            width: fit-content;
+
+            // @include respond(tab-port){
+            //     font-size: 2.5rem;
+        
+            // }
+        }
+    
+        &--para{
+            display: inline-block;
+            font-size: 2rem;
+            line-height: 1.6;
+        }
+
+        &--list{
+            margin-top: 2rem;
+            list-style: none;
+
+            // @include respond(tab-port){
+            //     // center the icons
+            //     text-align: center;
+            //     margin-top: 6rem;
+            // }
+            
+            &-item{ // icons for github, linkedin, etc
+                position: relative; // so icon title effect works
+                display: inline-block;
+                padding: 0 3.2rem 0 0;
+
+                // * name of hovered list icon / doesn't look great?
+                // &:hover .about-me__info--list-name{
+                // transform: scale(1);
+                // opacity: 1;
+                // }
+
+                &:hover .about-me__info--list-icon{
+                    color: var(--color-primary);
+                    transform: scale(1.2);
+
+                }
+            }
+
+            &-icon{
+                font-size: 3rem;
+                color: var(--color-grey-dark-1);
+                transition: all .25s;  
+            }
+
+            &-name{ // label for github, linkedin, etc
+                // absolute positioning; it won't have an effect on parents size or position
+                position: absolute;
+                font-size: 1.6rem;
+                top: 5rem;
+                right: 2rem;                
+                // For zoom in name effect
+                // start from size 0 opacity 0..
+                // go to full size and opaque
+                opacity: 0;
+                transform: scale(0);
+                transition: all .25s;
+
+            }
+
+            &--span{
+                display: inline-block;
+                position: relative;
+            }
+        }
+    }
+
+    &__img{ // large svg icon
+        // width 100% prevents image from overflowing out of the parent --container 
+        width: 70%;
+
+        &--container{
+            flex: 1;
+
+            // @include respond(phone){
+            //     flex: 1;
+            // }
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
