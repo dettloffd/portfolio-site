@@ -27,9 +27,10 @@ const Header = () => {
       <div className="header-container">
         <div className="header-info">
           <div className="header-info-container">
-            <h1 class="header-text header-header" style={{ fontSize: "7rem" }}>
-              Hello, I'm
-              <span className="color-primary"> David</span>
+            <p className="p-text">Hello! My name is</p>
+            <h1 class="header-text header-header" style={{ fontSize: "7.2rem", marginTop: "1.2rem" }}>
+              {/* Hello, I'm */}
+              <span>David Dettloff</span>
             </h1>
 
             <h2 class="header-text-2" style={{ marginTop: "1.2rem" }}>
@@ -39,6 +40,7 @@ const Header = () => {
               </span>
               .
             </h2>
+            <h3 className="header-text-3" style={{ marginTop: "1.2rem" }}>I specialize in building things for the web.</h3>
 
             <ul className="header-links" style={{ marginTop: "4.4rem" }} >
               {headerLinks.map((item) => (

@@ -6,23 +6,23 @@
     width: 100%;
 
     width: 80%;
-    max-width: 120rem;
+    max-width: 100rem;
 }
 .header-header{
 
     position: relative;
 
     // Little header pill
-    &:before{
-        content: "";
-        position: absolute;
-        height: 10px;
-        width: 8rem;
-        background: var(--color-primary);
-        border-radius: 10px;
-        display: inline-block;
-        top: -2rem;
-    }
+    // &:before{
+    //     content: "";
+    //     position: absolute;
+    //     height: 10px;
+    //     width: 8rem;
+    //     background: var(--color-primary);
+    //     border-radius: 10px;
+    //     display: inline-block;
+    //     top: -2rem;
+    // }
 }
 
 .header-info{
