@@ -18,34 +18,35 @@ const Work = () => {
           </h3>
         </div>
 
-        {ProjectsArray.map((project) => (
-          <div className="project">
-            <div className="project-info">
+        {ProjectsArray.map((project,index) => (
+          <div className="project" key={index}>
+            <motion.div
+                whileInView={{ y: [20, 0], opacity: [0, 1] }}
+                transition={{ duration: 0.75 }}
+                viewport={{ once: true }}
+            className="project-info">
               <h1 className="project-title">{project.title}</h1>
               <p className="p-text project-desc">{project.description}</p>
 
               <div className="project-links">
-              <a href={`${project.projectLink}`} target="_blank" className="project-links-button">
+              <a href={`${project.projectLink}`} target="_blank" rel="noreferrer" className="project-links-button">
                 Live Demo
               </a>
-              <a href={`${project.githubLink}`} target="_blank" className="project-links-button">
+              <a href={`${project.githubLink}`} target="_blank" rel="noreferrer" className="project-links-button">
                 Github
               </a>
 
             </div>
 
               <div className="project-tech">
-                <motion.div className="tech-list">
+                <div className="tech-list">
                   {SkillsArray.map((skill) => (
-                    // {project.skil}
-                    <motion.div
+                    <div
                       style={{
                         display: project.projectTech.includes(skill.name)
                           ? ""
                           : "None",
                       }}
-                      whileInView={{ y: [50, 0], opacity: [0, 1] }}
-                      transition={{ duration: 0.5 }}
                       className="tech-item app__flex"
                       key={skill.name}
                     >
@@ -61,17 +62,21 @@ const Work = () => {
                         />
                       </div>
                       <p className="tech-item-text ">{skill.name}</p>
-                    </motion.div>
+                    </div>
                   ))}
-                </motion.div>
+                </div>
               </div>
 
 
-            </div>
+            </motion.div>
             <div className="project-visual">
-              <div className="project-img-container">
-                <img src={project.projectImage}></img>
-              </div>
+              <motion.div 
+                  whileInView={{ opacity: [0, 1] }}
+                  transition={{ duration: 0.75 }}
+                  viewport={{ once: true }}
+              className="project-img-container">
+                <img src={project.projectImage} alt="A mockup of the project on different screen sizes" />
+              </motion.div>
             </div>
           </div>
         ))}

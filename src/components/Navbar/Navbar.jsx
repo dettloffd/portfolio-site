@@ -13,17 +13,11 @@ const Navbar = () => {
       return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  console.log(offset);
-
-
 
   return (
     <nav className="app__navbar">
-        {/* <div>
-            <h1>Home</h1>
-        </div> */}
       <ul className="app__navbar-links">
-        {["home", "about", "education", "skills", "work", "contact"].map(
+        {["home", "education", "skills", "work", "contact"].map(
           (item) => (
             <li className={`app__flex app__navbar-li ${
               offset > 50

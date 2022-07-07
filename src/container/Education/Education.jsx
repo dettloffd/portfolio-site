@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-import { AppWrapper, MotionWrapper } from "../../wrapper";
+import { AppWrapper } from "../../wrapper";
 
 import { images } from "../../constants";
 import { HiChevronRight } from "react-icons/hi";
@@ -31,7 +31,8 @@ const container = {
     scale: 1,
     transition: {
       delayChildren: 0.05,
-      staggerChildren: 0.03
+      staggerChildren: 0.03,
+      type: "tween"
     }
   }
 };
@@ -59,7 +60,6 @@ const Education = () => {
           <h3 className="header-text-3" style={{ marginTop: "1.6rem" }}>
             Bachelor of Science in Computer Science (2022)
           </h3>
-          {/* <h3 className="header-text-3" style={{marginTop: '.8rem'}}>2022</h3> */}
           <h3 className="header-text-3" style={{ marginTop: "1.6rem" }}>
             GPA: 3.84/4.00
           </h3>
@@ -70,6 +70,7 @@ const Education = () => {
               rotate: ["15deg", "15deg"],
             }}
             transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{ once: true }}
             src={images.wsu_shield}
             className="education-img"
           ></motion.img>
@@ -77,7 +78,7 @@ const Education = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          // viewport={{ once: true }}
+          viewport={{ once: true }}
           variants={container}
           transition={{ duration: 1 }}
           className="education-courses"

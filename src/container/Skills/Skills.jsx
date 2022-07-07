@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
-import { AppWrapper, MotionWrapper } from "../../wrapper";
+import React, { useState } from "react";
+import { AppWrapper } from "../../wrapper";
 import { SkillsArray } from "./SkillsArray";
 import "./Skills.scss";
 
@@ -89,4 +89,3 @@ const Skills = () => {
 };
 
 export default AppWrapper(Skills, "skills");
-// export default AppWrapper( MotionWrapper(Skills, 'app__skills'), "skills");

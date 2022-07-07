@@ -16,12 +16,13 @@
   justify-content: center;
 }
 
-// first part
+// header of the section
 .work-info {
   flex: 1;
   text-align: center;
 }
 
+// individual project
 .project {
   margin-top: 12rem;
   flex: 1;
@@ -40,6 +41,7 @@
     flex-direction: column;
   }
 
+  // Project title
   &-title {
     font-size: 3.6rem;
     font-weight: 700;
@@ -59,11 +61,9 @@
 
     &-button {
       text-decoration: none;
-      // border-radius: 1rem;
 
       margin: 1rem 0.25rem;
       color: var(--color-primary);
-      // background-color: var(--color-primary);
       padding: 0.5rem 2.5rem;
       display: inline-block; // necessary for effect!
       font-size: 1.6rem;
@@ -80,6 +80,7 @@
     }
   }
 
+  // Display image of the project
   &-visual {
     display: flex;
     flex: 1;
