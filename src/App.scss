@@ -92,6 +92,11 @@ html{
 .app__container {
     width: 100%;
     min-height: 100vh;
+
+    // Overflow and position: keep watermark contained
+    overflow: hidden;
+    position: relative;
+    
   
     display: flex;
     flex-direction: row;

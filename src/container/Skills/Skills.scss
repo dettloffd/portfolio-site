@@ -1,7 +1,10 @@
+@use "../../mixins/respond.scss";
+
 .skills {
   flex: 1;
   width: 100%;
   flex-direction: column;
+  overflow: hidden; // watermark
 }
 
 .skills-header {
@@ -38,12 +41,14 @@
 
   display: flex;
   flex-direction: row;
-
   align-items: center;
   justify-content: center;
 
-  // because this is the parent of the watermark
-  overflow: hidden; //watermark overflow
+  @include respond.respond(tab-port){
+    flex-direction: column;
+    padding: 3rem;
+  }
+
 
   @media screen and (max-width: 900px) {
     width: 100%;
@@ -55,15 +60,26 @@
 
 // List of all skills and
 .skills-list {
+
+  @include respond.respond(tab-port){
+    order: 2;
+  }
+
+
   flex: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: flex-start;
-  margin-right: 3rem;
+  align-items: center;
+  
+
+  @include respond.respond(tab-port){
+    margin-right: 0;
+  }
 }
 
 .skills-item {
+  // flex: 1;
   margin: 1.6rem;
   flex-direction: column;
   text-align: center;
@@ -104,9 +120,9 @@
       height: 10rem;
     }
 
-    @media screen and (max-width: 450px) {
-      width: 7rem;
-      height: 7rem;
+    @include respond.respond(phone){
+      width: 5rem;
+      height: 5rem;
     }
   }
 }

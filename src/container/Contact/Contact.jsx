@@ -5,9 +5,9 @@ import "./Contact.scss";
 
 const Contact = () => {
   return (
-    <>
+    <><h2 className="header-text contact-header">Contact Me</h2>
         <div className="contact-container">
-        <h2 className="header-text contact-header">Contact Me</h2>
+        
         <h3 className="header-text-3 contact__secondary-header">
           Please feel free to send me a message or connect with me through my
           social links!

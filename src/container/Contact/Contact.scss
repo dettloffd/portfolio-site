@@ -1,8 +1,7 @@
 @use "../../mixins/respond.scss";
 
 .contact-container{
-
-    position: relative;
+  overflow: hidden;
     width: 80%;
     max-width: 120rem;
     margin-top: 3rem;
