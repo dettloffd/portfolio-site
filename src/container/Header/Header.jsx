@@ -9,14 +9,14 @@ const headerVariants = {
   initial: {},
   animate: {
     transition: {
-      staggerChildren: 0.05,
+      staggerChildren: 0.08,
     },
   },
 };
 
 const childVariants = {
   initial: { translateY: 10, opacity: 0 },
-  animate: { translateY: 0, opacity: 1, transition: { duration: 0.4 } },
+  animate: { translateY: 0, opacity: 1, transition: { duration: 0.5 } },
 };
 
 const Header = () => {
@@ -37,12 +37,13 @@ const Header = () => {
             </p>
             <h1
               className="header-text header-header "
-              style={{ fontSize: "7.2rem", marginTop: "1.2rem" }}
+              style={{ marginTop: "1.2rem" }}
             >
               <motion.div variants={childVariants}>David Dettloff</motion.div>
             </h1>
 
-            <h2 className="header-text-2" style={{ marginTop: "1.2rem" }}>
+
+            {/* <h2 className="header-text-3" style={{fontSize: "2.8rem", marginTop: "1.2rem" }}>
               <motion.div variants={childVariants}>
                 I'm a college educated{" "}
                 <span className="color-primary" style={{ fontWeight: 600 }}>
@@ -50,10 +51,20 @@ const Header = () => {
                 </span>
                 .
               </motion.div>
+            </h2> */}
+
+            <h2 className="header-text-3" style={{fontSize: "2.8rem", marginTop: "1.2rem" }}>
+              <motion.div variants={childVariants}>
+                I'm a {" "}
+                <span className="color-primary" style={{ fontWeight: 600 }}>
+                  Software Engineer
+                </span>
+                {" "} who builds things for the web.
+              </motion.div>
             </h2>
             <h3 className="header-text-3" style={{ marginTop: "1.2rem" }}>
               <motion.div variants={childVariants}>
-                I specialize in building things for the web.
+                
               </motion.div>
             </h3>
 

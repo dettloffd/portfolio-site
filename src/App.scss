@@ -60,6 +60,10 @@ html{
   font-size: 5.8rem;
   font-weight: 600;
   color: var(--font-color-dark1);
+
+  @include respond.respond(phone){
+    font-size: 4.8rem;
+}
 }
 
 .header-text-2{
