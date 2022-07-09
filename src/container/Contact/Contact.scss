@@ -26,16 +26,16 @@
     position: relative;
 
     // Little header pill
-    &:before {
-      content: "";
-      position: absolute;
-      height: 8px;
-      width: 6rem;
-      background: var(--color-primary);
-      border-radius: 10px;
-      display: inline-block;
-      top: -1.2rem;
-    }
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   height: 8px;
+    //   width: 6rem;
+    //   background: var(--color-primary);
+    //   border-radius: 10px;
+    //   display: inline-block;
+    //   top: -1.2rem;
+    // }
   }
 
   &__secondary-header {

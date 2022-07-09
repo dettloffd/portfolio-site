@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import React from "react";
+import { motion } from "framer-motion";
 import { AppWrapper } from "../../wrapper";
 import { images } from "../../constants";
 import {socialLinks} from "../../constants/socials";

@@ -5,6 +5,21 @@
   width: 100%;
   flex-direction: column;
   overflow: hidden; // watermark
+  
+}
+
+.pill{
+  position: absolute;
+  height: 8px;
+  width: 1rem;
+  background: var(--color-primary);
+  border-radius: 10px;
+  display: inline-block;
+  top: -1.8rem;
+  left: 0;
+  // top: -100%;
+  // opacity: 1;
+
 }
 
 .skills-header {
@@ -16,12 +31,32 @@
     content: "";
     position: absolute;
     height: 8px;
-    width: 6rem;
+    width: 1rem;
     background: var(--color-primary);
     border-radius: 10px;
     display: inline-block;
-    top: -1.6rem;
+    // top: -1.6rem;
+    // top: -100%;
+    opacity: 0;
+
+
+
+
   }
+
+
+  // &:hover::before{
+  //   top: -1.6rem;
+  //   width: 7.5rem;
+  //   opacity: 1;
+  //   transition: all .7s ease;
+  // }
+
+
+
+
+
+
 }
 
 .skills_watermark {

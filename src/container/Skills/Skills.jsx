@@ -1,7 +1,9 @@
-import { motion } from "framer-motion";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+
 import { AppWrapper } from "../../wrapper";
 import { SkillsArray } from "./SkillsArray";
+import { MotionPill } from "../../components";
 import "./Skills.scss";
 
 const Skills = () => {
@@ -20,10 +22,8 @@ const Skills = () => {
 
   return (
     <>
-    <h1 className="skills_watermark">Skills</h1>
+      <h1 className="skills_watermark">Skills</h1>
       <div className="skills-container">
-      
-        
         <motion.div className="skills-list">
           {SkillsArray.map((skill) => (
             <motion.div
@@ -56,7 +56,15 @@ const Skills = () => {
           ))}
         </motion.div>
         <div className="skills-info">
-          <h1 className="header-text skills-header">Skills & Technologies</h1>
+          <motion.h1
+            // transition={{ duration: 2.5 }}
+            // whileInView={{ x: [-125, 0], opacity: [0, 1] }}
+            className="header-text skills-header"
+          >
+            Skills & Technologies
+            <MotionPill />
+          </motion.h1>
+
           <h2
             className="header-text-3 skills-info-about"
             style={{ marginTop: "1.6rem" }}

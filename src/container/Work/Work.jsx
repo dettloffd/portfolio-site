@@ -1,9 +1,10 @@
-import { motion } from "framer-motion";
 import React from "react";
+import { motion } from "framer-motion";
+
 import { AppWrapper } from "../../wrapper";
 import { SkillsArray } from "../Skills/SkillsArray";
 import { ProjectsArray } from "./ProjectsArray";
-
+import { MotionPill } from "../../components";
 import "./Work.scss";
 
 const Work = () => {
@@ -11,7 +12,9 @@ const Work = () => {
     <>
       <div className="work-container">
         <div className="work-info">
-          <h2 className="header-text education-header">Work & Projects</h2>
+          <h2 className="header-text education-header">Work & Projects
+          <MotionPill />
+          </h2>
           <h3 className="header-text-3" style={{ marginTop: "1.6rem" }}>
             A non exhaustive list of some of the work that I've done.
           </h3>

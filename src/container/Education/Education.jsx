@@ -1,10 +1,9 @@
-import { motion } from "framer-motion";
 import React from "react";
-
-import { AppWrapper } from "../../wrapper";
-
-import { images } from "../../constants";
+import { motion } from "framer-motion";
 import { HiChevronRight } from "react-icons/hi";
+import { AppWrapper } from "../../wrapper";
+import { images } from "../../constants";
+import { MotionPill } from "../../components";
 import "./Education.scss";
 
 let courses = [
@@ -32,17 +31,17 @@ const container = {
     transition: {
       delayChildren: 0.05,
       staggerChildren: 0.03,
-      type: "tween"
-    }
-  }
+      type: "tween",
+    },
+  },
 };
 
 const item = {
   hidden: { x: 100, opacity: 0 },
   visible: {
     x: 0,
-    opacity: 1
-  }
+    opacity: 1,
+  },
 };
 
 const Education = () => {
@@ -50,7 +49,11 @@ const Education = () => {
     <div className="education app__flex">
       <div className="education-container">
         <div className="education-info">
-          <h2 className="header-text education-header">Education</h2>
+          <h2 className="header-text education-header">
+            Education
+            <MotionPill />
+          </h2>
+
           <h3
             className="header-text-2 university-name"
             style={{ marginTop: "2.4rem" }}
@@ -68,7 +71,7 @@ const Education = () => {
               x: [-100, 0],
               opacity: [0, 0.065],
               rotate: ["15deg", "15deg"],
-              animationFillMode: "backwards"
+              animationFillMode: "backwards",
             }}
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true }}
@@ -85,7 +88,11 @@ const Education = () => {
           className="education-courses"
         >
           {courses.map((course, index) => (
-            <motion.div className="courses-item" variants={item} key={`course-${index}`}>
+            <motion.div
+              className="courses-item"
+              variants={item}
+              key={`course-${index}`}
+            >
               <HiChevronRight className="courses-item-icon" />
               <p>{course}</p>
             </motion.div>
@@ -97,4 +104,3 @@ const Education = () => {
 };
 
 export default AppWrapper(Education, "education");
-
