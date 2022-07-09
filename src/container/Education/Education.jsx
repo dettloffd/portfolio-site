@@ -68,6 +68,7 @@ const Education = () => {
               x: [-100, 0],
               opacity: [0, 0.065],
               rotate: ["15deg", "15deg"],
+              animationFillMode: "backwards"
             }}
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true }}
