@@ -134,15 +134,9 @@
 
   /// Text under title
   &-about {
-    margin-top: 2.4rem;
+    margin-top: 1.6rem;
     line-height: 1.5;
     color: var(--color-grey-text);
-
-    @include respond.respond(tab-port){
-      margin-top: 3.6rem;
-    }
-
-
   }
 }
 
