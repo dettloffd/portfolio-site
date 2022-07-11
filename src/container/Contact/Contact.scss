@@ -18,24 +18,9 @@
 .contact {
   flex: 1;
   width: 100%;
-//   flex-direction: column;
-//   position: relative;
-//   overflow: hidden;
 
   &-header {
     position: relative;
-
-    // Little header pill
-    // &:before {
-    //   content: "";
-    //   position: absolute;
-    //   height: 8px;
-    //   width: 6rem;
-    //   background: var(--color-primary);
-    //   border-radius: 10px;
-    //   display: inline-block;
-    //   top: -1.2rem;
-    // }
   }
 
   &__secondary-header {
@@ -51,10 +36,6 @@
     font-size: 72rem;
     opacity: .017;
     pointer-events: none;
-    // left: 1;
-    // top: 5%;
-    // top: 1;
-    // left: 1;
     bottom: 30%;
   }
 
@@ -102,10 +83,6 @@
 
     &:focus {
       outline: none; // ugly blue border on focus
-
-      // These are important for accessibility reasons -
-      // want to ensure you know what input element is focused in case using keyboard only to navigate
-      // plus it just looks good
       border: none;
     }
 

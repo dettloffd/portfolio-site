@@ -10,7 +10,6 @@ import Work from './Work/Work';
 export {
     About,
     Education,
-    // Footer,
     Header,
     Skills,
     Contact,

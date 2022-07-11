@@ -57,8 +57,6 @@ const Skills = () => {
         </motion.div>
         <div className="skills-info">
           <motion.h1
-            // transition={{ duration: 2.5 }}
-            // whileInView={{ x: [-125, 0], opacity: [0, 1] }}
             className="header-text skills-header"
           >
             Skills & Technologies

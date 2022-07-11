@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { AppWrapper } from "../../wrapper";
 import { images } from "../../constants";
-import {socialLinks} from "../../constants/socials";
+import { socialLinks } from "../../constants/socials";
 import "./Header.scss";
 
 const headerVariants = {
@@ -42,30 +42,20 @@ const Header = () => {
               <motion.div variants={childVariants}>David Dettloff</motion.div>
             </h1>
 
-
-            {/* <h2 className="header-text-3" style={{fontSize: "2.8rem", marginTop: "1.2rem" }}>
+            <h2
+              className="header-text-3"
+              style={{ fontSize: "2.8rem", marginTop: "1.2rem" }}
+            >
               <motion.div variants={childVariants}>
-                I'm a college educated{" "}
+                I'm a{" "}
                 <span className="color-primary" style={{ fontWeight: 600 }}>
                   Software Engineer
-                </span>
-                .
-              </motion.div>
-            </h2> */}
-
-            <h2 className="header-text-3" style={{fontSize: "2.8rem", marginTop: "1.2rem" }}>
-              <motion.div variants={childVariants}>
-                I'm a {" "}
-                <span className="color-primary" style={{ fontWeight: 600 }}>
-                  Software Engineer
-                </span>
-                {" "} who builds things for the web.
+                </span>{" "}
+                who builds things for the web.
               </motion.div>
             </h2>
             <h3 className="header-text-3" style={{ marginTop: "1.2rem" }}>
-              <motion.div variants={childVariants}>
-                
-              </motion.div>
+              <motion.div variants={childVariants}></motion.div>
             </h3>
 
             <motion.ul
@@ -89,7 +79,10 @@ const Header = () => {
           viewport={{ once: true }}
           className="header-img"
         >
-          <img src={images.web_app} alt="illustration of a laptop and phone screen" />
+          <img
+            src={images.web_app}
+            alt="illustration of a laptop and phone screen"
+          />
         </motion.div>
       </div>
     </>

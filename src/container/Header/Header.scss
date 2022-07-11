@@ -20,7 +20,6 @@
     display: flex;
     flex: 1.5;
     overflow: hidden;
-    // width: 80%;
 
     @include respond.respond(tab-port){
         flex: 1;
@@ -29,7 +28,6 @@
     &-container{
 
         display: flex;
-        // flex: 1;
         flex-direction: column;
         width: 95%;
 
@@ -63,8 +61,6 @@
 
 
 .header-links{
-
-    // margin-top: 2rem;
     list-style: none;
 
     &-item{
@@ -97,24 +93,11 @@
     min-height: 80vh;
     margin-bottom: 4rem;
 
-    // @include respond(tab-port){
-    //     flex-direction: column;
-    //     justify-content: space-around;
-    //     margin-top: 2rem;
-    //     height: 100%;
-
-    // }
-
     &__info{
         display: flex;
         flex-direction: column;
         justify-content: center;
         flex: 1;
-        // @include respond(tab-port){
-        //     width: 70%;
-        //     margin-bottom: 5rem;
-    
-        // }
 
         &--title{
             display: inline-block;
@@ -128,11 +111,6 @@
             margin-bottom: 2rem;
             position: relative; // for underline effect** 
             width: fit-content;
-
-            // @include respond(tab-port){
-            //     font-size: 2.5rem;
-        
-            // }
         }
     
         &--para{
@@ -144,23 +122,11 @@
         &--list{
             margin-top: 2rem;
             list-style: none;
-
-            // @include respond(tab-port){
-            //     // center the icons
-            //     text-align: center;
-            //     margin-top: 6rem;
-            // }
             
             &-item{ // icons for github, linkedin, etc
                 position: relative; // so icon title effect works
                 display: inline-block;
                 padding: 0 3.2rem 0 0;
-
-                // * name of hovered list icon / doesn't look great?
-                // &:hover .about-me__info--list-name{
-                // transform: scale(1);
-                // opacity: 1;
-                // }
 
                 &:hover .about-me__info--list-icon{
                     color: var(--color-primary);
@@ -203,11 +169,6 @@
 
         &--container{
             flex: 1;
-
-            // @include respond(phone){
-            //     flex: 1;
-            // }
-
             display: flex;
             align-items: center;
             justify-content: center;

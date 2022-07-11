@@ -8,11 +8,6 @@ const Contact = () => {
     <>
       <h2 className="header-text contact-header">
         Contact Me
-        {/* <motion.div
-          whileInView={pillView}
-          transition={pillTransition}
-          className="pill"
-        /> */}
         <MotionPill />
       </h2>
       <div className="contact-container">
