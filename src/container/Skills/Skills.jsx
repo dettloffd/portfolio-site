@@ -67,7 +67,7 @@ const Skills = () => {
 
           <h2
             className="header-text-3 skills-info-about"
-            style={{ marginTop: "1.6rem" }}
+            
           >
             As a full stack developer, I utilize several{" "}
             <span className="color-primary-dark">tools</span> and{" "}
@@ -78,7 +78,7 @@ const Skills = () => {
           </h2>
 
           {/* Buttons for skill tags */}
-          <div className="skills-filter" style={{ marginTop: "1.6rem" }}>
+          <div className="skills-filter">
             {["Frontend", "Backend", "Tools", "Database"].map((item, index) => (
               <div
                 key={index}

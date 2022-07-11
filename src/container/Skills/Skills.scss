@@ -8,20 +8,6 @@
   
 }
 
-.pill{
-  position: absolute;
-  height: 8px;
-  width: 1rem;
-  background: var(--color-primary);
-  border-radius: 10px;
-  display: inline-block;
-  top: -1.8rem;
-  left: 0;
-  // top: -100%;
-  // opacity: 1;
-
-}
-
 .skills-header {
   color: var(--font-color-dark1);
   position: relative;
@@ -68,6 +54,7 @@
 
   @include respond.respond(tab-port){
     order: 2;
+    margin-top: 4.8rem;
   }
 
 
@@ -129,8 +116,8 @@
     }
 
     @include respond.respond(phone){
-      width: 3rem;
-      height: 3rem;
+      width: 4rem;
+      height: 4rem;
     }
   }
 }
@@ -145,16 +132,28 @@
   text-align: left; // would be this anyway; just set explicitly
   justify-content: center;
 
+  /// Text under title
   &-about {
+    margin-top: 2.4rem;
     line-height: 1.5;
     color: var(--color-grey-text);
+
+    @include respond.respond(tab-port){
+      margin-top: 3.6rem;
+    }
+
+
   }
 }
 
 // List of tags
 .skills-filter {
-  margin-top: 1rem;
+  margin-top: 1.6rem;
   display: flex;
+
+  @include respond.respond(tab-port){
+    margin-top: 2.4rem;
+  }
 }
 
 // buttons for tags

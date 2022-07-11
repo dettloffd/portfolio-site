@@ -12,6 +12,8 @@
     display: inline-block;
     width: fit-content;
 
+
+
     // &:before {
     //   content: "";
     //   position: absolute;
@@ -151,4 +153,8 @@
   font-weight: 500;
   // opacity: .7;
   color: var(--font-color-dark1);
+
+  @include respond.respond(phone){
+    font-size: 2.4rem;
+  }
 }

@@ -60,10 +60,10 @@ const Education = () => {
           >
             Wayne State University
           </h3>
-          <h3 className="header-text-3" style={{ marginTop: "1.6rem" }}>
+          <h3 className="header-text-3" style={{ marginTop: "2rem" }}>
             Bachelor of Science in Computer Science (2022)
           </h3>
-          <h3 className="header-text-3" style={{ marginTop: "1.6rem" }}>
+          <h3 className="header-text-3" style={{ marginTop: "2rem" }}>
             GPA: 3.84/4.00
           </h3>
           <motion.img
