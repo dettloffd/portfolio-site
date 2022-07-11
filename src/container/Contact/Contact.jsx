@@ -17,7 +17,7 @@ const Contact = () => {
       </h2>
       <div className="contact-container">
         <h3 className="header-text-3 contact__secondary-header">
-          Please feel free to send me a message or connect with me through my
+          Send me a message here or through my
           social links!
         </h3>
         <h1 className="contact_watermark">Contact</h1>

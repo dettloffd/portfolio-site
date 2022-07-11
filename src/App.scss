@@ -1,34 +1,5 @@
 @use "./mixins/respond.scss";
-// MEDIA QUERY MANAGER
 
-// 0 - 600px phone
-// 600 - 900 tablet portrait
-// 900 - 1200 tablet landscape
-// {1200 - 1800} "normal" styles
-// 1800 + big desktop
-
-// rems seem to fail in media queries; ems are better
-// not effected by what we did above
-// 1 em = 16px
-
-
-// ORDER:
-// Base/typography => general layout => page layout => components
-
-// @mixin respond($breakpoint){    // 600px
-//   @if $breakpoint == phone{
-//       @media (max-width: 37.5em){@content}    
-//   };
-//   @if $breakpoint == tab-port{    // 900px
-//       @media (max-width: 56.25em){@content}
-//   };
-//   @if $breakpoint == tab-land{    // 1200px
-//       @media (max-width: 75em){@content}    
-//   };
-//   @if $breakpoint == big-desktop{ // 1800px
-//       @media (min-width: 112.5em){@content}
-//   }
-// }
 
 html{
   font-size: 62.5%;
@@ -56,19 +27,19 @@ html{
   background-color: #fafafa;
 }
 
-// .pill{
-//   position: absolute;
-//   height: 8px;
-//   width: 1rem;
-//   background: var(--color-primary);
-//   border-radius: 10px;
-//   display: inline-block;
-//   top: -1.8rem;
-//   left: 0;
-//   // top: -100%;
-//   // opacity: 1;
+.pill{
+  position: absolute;
+  height: 8px;
+  width: 1rem;
+  background: var(--color-primary);
+  border-radius: 10px;
+  display: inline-block;
+  top: -1.8rem;
+  left: 0;
+  // top: -100%;
+  // opacity: 1;
 
-// }
+}
 
 .header-text{
   font-size: 5.8rem;
