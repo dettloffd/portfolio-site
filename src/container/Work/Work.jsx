@@ -16,7 +16,7 @@ const Work = () => {
           <MotionPill />
           </h2>
           <h3 className="header-text-3" style={{ marginTop: "1.6rem" }}>
-            A non exhaustive list of some of the work that I've done.
+            A non-exhaustive list of some of the work that I've done.
           </h3>
         </div>
 

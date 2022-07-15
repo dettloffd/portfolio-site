@@ -30,14 +30,14 @@ const Header = () => {
           animate="animate"
         >
           <div className="header-info-container">
-            <p className="p-text">
+            <p style={{fontSize: "1.6rem"}} className="p-text">
               <motion.div variants={childVariants}>
                 Hello! My name is
               </motion.div>
             </p>
             <h1
               className="header-text header-header "
-              style={{ marginTop: "1.2rem" }}
+              style={{ marginTop: ".8rem" }}
             >
               <motion.div variants={childVariants}>David Dettloff</motion.div>
             </h1>
@@ -49,14 +49,25 @@ const Header = () => {
               <motion.div variants={childVariants}>
                 I'm a{" "}
                 <span className="color-primary" style={{ fontWeight: 600 }}>
-                  Software Engineer
+                  Full Stack Developer.
                 </span>{" "}
-                who builds things for the web.
+                <br></br>
+               {/* <span className="span2">I build things for the web.</span>  */}
               </motion.div>
             </h2>
-            <h3 className="header-text-3" style={{ marginTop: "1.2rem" }}>
-              <motion.div variants={childVariants}></motion.div>
-            </h3>
+
+
+            <h2
+              className="header-text-3"
+              style={{ fontSize: "2rem", marginTop: ".6rem" }}
+            >
+              <motion.div variants={childVariants}>
+               I build things for the web.
+              </motion.div>
+            </h2>
+
+
+
 
             <motion.ul
               variants={childVariants}
