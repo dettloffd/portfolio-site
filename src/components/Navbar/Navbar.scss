@@ -1,82 +1,79 @@
 @use "../../mixins/respond.scss";
 
-.app{
-    &__navbar{
-        font-size: 16px;
-        width: 100%;
-        display: flex;
-        // justify-content: space-between;
-        justify-content: center;
-        align-items: center;
+.app {
+  &__navbar {
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    // justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 
-        padding: 16px 24px;
-        background: rgba(255,255,255, 0.25);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        position: fixed;
-        border: 1px solid rgba(255,255,255, 0.25);
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    position: fixed;
+    border: 1px solid rgba(255, 255, 255, 0.25);
 
-        z-index: 2;
-        transition: all .3s;
+    z-index: 2;
+    transition: all 0.3s;
 
-        @include respond.respond(phone){
-            transform: scale(.7);
-            padding: 0px;
-
-        }
-
-        &-links{
-            text-decoration: none;
-            list-style: none;
-            // take the rest of the space not taken by anything else
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            
-
-        }
-
-        &-li{
-            position: relative; // ?
-            text-decoration: none;
-            font-weight: 500;
-            padding: 10px 20px;
-            flex-direction: column;
-            margin: 0 10px;
-
-            transition: all .3s;
-
-            
-
-            @include respond.respond(phone){
-                margin: 0 5px;
-                padding: 8px 8px;
-            }
-
-            // When page is scrolled down shrink navbar
-            &-scrolling{
-                transform: scale(.8);
-                margin: 0 1px;
-
-                @include respond.respond(phone){
-                    transform: scale(.8);
-                }
-                
-            }
-        }
-
-        a{
-            color: var(--color-grey-text);
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: color .3s, font-size .5s;
-
-            &:hover{
-                color: var(--color-primary-dark);
-            }
-        }
+    @include respond.respond(phone) {
+      padding: 0px;
     }
-}
 
+    &-links {
+      text-decoration: none;
+      list-style: none;
+      // take the rest of the space not taken by anything else
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // transform: scale(.7);
+
+      @include respond.respond(phone) {
+        transform: scale(0.7);
+        padding: 0px;
+      }
+    }
+
+    &-li {
+      position: relative; // ?
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 20px;
+      flex-direction: column;
+      margin: 0 10px;
+
+      transition: all 0.3s;
+
+      @include respond.respond(phone) {
+        margin: 0 5px;
+        padding: 8px 8px;
+      }
+
+      // When page is scrolled down shrink navbar
+      &-scrolling {
+        transform: scale(0.8);
+        margin: 0 1px;
+
+        @include respond.respond(phone) {
+          transform: scale(0.8);
+        }
+      }
+    }
+
+    a {
+      color: var(--color-grey-text);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.3s, font-size 0.5s;
+
+      &:hover {
+        color: var(--color-primary-dark);
+      }
+    }
+  }
+}
