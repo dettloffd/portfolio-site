@@ -20,7 +20,7 @@
         transition: all .3s;
 
         @include respond.respond(phone){
-            transform: scale(.8);
+            transform: scale(.7);
             padding: 0px;
 
         }
@@ -59,6 +59,10 @@
             &-scrolling{
                 transform: scale(.8);
                 margin: 0 1px;
+
+                @include respond.respond(phone){
+                    transform: scale(.8);
+                }
                 
             }
         }
