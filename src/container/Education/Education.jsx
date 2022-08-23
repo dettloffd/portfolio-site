@@ -30,14 +30,14 @@ const container = {
     scale: 1,
     transition: {
       delayChildren: 0.05,
-      staggerChildren: 0.03,
+      staggerChildren: 0.025,
       type: "tween",
     },
   },
 };
 
 const item = {
-  hidden: { x: 100, opacity: 0 },
+  hidden: { x: 60, opacity: 0 },
   visible: {
     x: 0,
     opacity: 1,
@@ -64,7 +64,7 @@ const Education = () => {
             Bachelor of Science in Computer Science (2022)
           </h3>
           <h3 className="header-text-3" style={{ marginTop: "2rem" }}>
-            GPA: 3.84/4.00
+            GPA: 3.85/4.00
           </h3>
           <motion.img
             src={images.wsu_shield}
