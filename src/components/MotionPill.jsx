@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export const pillView = { width: ["1rem", "6.5rem"], opacity: [0, 1] };
-export const pillTransition = { duration: 0.75, delay: 0.025 };
+export const pillTransition = { duration: 0.75, delay: 0.05 };
 
 const MotionPill = () => {
   return (
